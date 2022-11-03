@@ -206,8 +206,8 @@ left: 60px;
 -moz-background-size: 30px 30px;
 -o-background-size: 30px 30px;
 -webkit-background-size: 30px 30px;
-background-size: 30px 30px;
-padding-left: 40px;
+background-size: 120px 30px;
+padding-left: 120px;
 height: 30px;
 line-height: 1.9;
 }")))
@@ -229,6 +229,15 @@ line-height: 1.9;
           ;; subtitle
           (format
            "     subtitle: '%s', \n" (org-ioslide--plist-get-string info :subtitle))
+          ;; eventInfo
+          "     eventInfo: {
+"
+          ;; date
+          (format
+           "       date: '%s', \n" (org-ioslide--plist-get-string info :date))
+
+          "     }, \n"
+
           ;; useBuilds
           (format
            "     useBuilds: %s, " (org-ioslide--plist-get-string info :use-builds))
