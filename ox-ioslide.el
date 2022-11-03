@@ -202,7 +202,7 @@ font-size: 12pt;
 content: \"" hash-tag "\";
 position: absolute;
 bottom: 20px;
-left: 60px;
+left: 80%;
 -moz-background-size: 30px 30px;
 -o-background-size: 30px 30px;
 -webkit-background-size: 30px 30px;
@@ -595,7 +595,7 @@ holding contextual information."
              (or (org-element-property :ASIDE headline) "")
              ;; get ICON from property, if not exist get ICON from info
              (or (org-element-property :ICON headline)
-                 (plist-get info :icon) "")
+                 (org-ioslide--plist-get-string info :fav-icon) "")
              ) "")
       "")))
 
@@ -782,8 +782,8 @@ contextual information."
 
 (defun org-ioslide--build-title-slide (info)
   (format
-   "<slide class=\"title-slide segue nobackground\">
-       <aside class=\"gdbar\"><img src=\"%s\"></aside>
+   "<slide class=\"title-slide segue nobackground\"
+           style=\"background: white url(%s) no-repeat left top/100%% 50%%\">
        <!-- The content of this hgroup is replaced programmatically through the slide_config.json. -->
        <hgroup class=\"auto-fadein\">
          <h1 data-config-title><!-- populated from slide_config.json --></h1>
