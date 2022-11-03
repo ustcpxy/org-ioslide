@@ -202,7 +202,7 @@ font-size: 12pt;
 content: \"" hash-tag "\";
 position: absolute;
 bottom: 20px;
-left: 80%;
+left: 85%;
 -moz-background-size: 30px 30px;
 -o-background-size: 30px 30px;
 -webkit-background-size: 30px 30px;
@@ -522,9 +522,9 @@ holding contextual information."
           ;; container class
           (org-ioslide--container-class headline info)
           ;; body
-          (format "%s%s%s"
+          (format "%s%s"
                   ;; aside
-                  (org-ioslide--aside headline info)
+                  ;; (org-ioslide--aside headline info)
                   ;; title
                   (org-ioslide--title headline info)
 
