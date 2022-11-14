@@ -558,7 +558,7 @@ holding contextual information."
          (format "class=\"%s %s %s\""
                  (if fill-image "fill" "") class "nobackground") "")
      (if (or segue-p fill-image)
-         (format "style=\"background-image: url(%s)\"" fill-image) "")
+         (format "style=\"background: url(%s) no-repeat left top/100%% 100%%\"" fill-image) "")
      )))
 
 (defun org-ioslide--title (headline info)
