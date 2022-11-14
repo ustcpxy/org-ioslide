@@ -783,7 +783,7 @@ contextual information."
 (defun org-ioslide--build-title-slide (info)
   (format
    "<slide class=\"title-slide segue nobackground\"
-           style=\"background: white url(%s) no-repeat left top/100%% 50%%\">
+           style=\"background: white url(%s) no-repeat left top/100%% 100%%\">
        <!-- The content of this hgroup is replaced programmatically through the slide_config.json. -->
        <hgroup class=\"auto-fadein\">
          <h1 data-config-title><!-- populated from slide_config.json --></h1>
@@ -869,8 +869,8 @@ INFO is a plist used as a communication channel."
                        "rel=\"stylesheet\" media=\"all\" href=\"theme/css/small-icon.css\""
                        info)
    ;; [FIXME: ugly workaround] Generate theme/css/small-icon.css.
-   (org-ioslide-generate-small-icon-css (org-ioslide--plist-get-string info :fav-icon)
-                                        (org-ioslide--plist-get-string info :hash-tag))
+   ;; (org-ioslide-generate-small-icon-css (org-ioslide--plist-get-string info :fav-icon)
+   ;;                                      (org-ioslide--plist-get-string info :hash-tag))
    "\n"
    "<base target=\"_blank\"> <!-- This amazingness opens all links in a new tab. -->\n"
    "<script data-main=\"js/slides\" src=\"js/require-1.0.8.min.js\"></script>"
